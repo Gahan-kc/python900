@@ -35,4 +35,5 @@ def clean_screap(book):
 book_dicts = [clean_screap(book) for book in first_21]
 book_dicts
 import pandas as pd
-pd.DataFrame(book_dicts)
+df = pd.DataFrame(book_dicts)
+df.to_csv("data.csv" index=False)
